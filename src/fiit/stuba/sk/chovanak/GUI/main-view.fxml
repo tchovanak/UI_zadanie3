@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="anchor" minHeight="-Infinity" minWidth="-Infinity" prefHeight="708.0" prefWidth="1332.0" styleClass="theme, " xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="fiit.stuba.sk.tomasChovanak.UI2.gui.ViewController">
+  <!-- TODO Add Nodes -->
+  <children>
+    <TextField id="txtFieldStav" fx:id="txtFieldStav1" layoutX="201.0" layoutY="643.0" prefWidth="107.0" />
+    <Label layoutX="27.0" layoutY="643.0" text="aktualna hlbka spracovania" />
+    <TextField id="txtFieldStav" fx:id="txtFieldSIRKA1" layoutX="895.0" layoutY="94.0" prefWidth="103.0" />
+    <TextField id="txtFieldStav" fx:id="txtFieldVYSKA1" layoutX="895.0" layoutY="132.0" prefWidth="103.0" />
+    <TextField id="txtFieldStav" fx:id="txtFieldHODNOTY1" layoutX="894.0" layoutY="171.0" onAction="#startBFS" prefWidth="373.0" />
+    <Label layoutX="840.0" layoutY="97.0" text="širka" />
+    <Label layoutX="840.0" layoutY="138.0" text="výška" />
+    <Label layoutX="839.0" layoutY="174.0" text="hodnoty" />
+    <Label layoutX="956.0" layoutY="26.0" text="nastavenie hodnôt hlavolamu">
+      <font>
+        <Font size="16.0" fx:id="x1" />
+      </font>
+    </Label>
+    <Label font="$x1" layoutX="842.0" layoutY="61.0" text="zaciatocny stav" />
+    <Label font="$x1" layoutX="839.0" layoutY="312.0" text="konecny stav" />
+    <TextField id="txtFieldStav" fx:id="txtFieldHODNOTY2" layoutX="892.0" layoutY="357.0" prefWidth="373.0" />
+    <Label layoutX="837.0" layoutY="360.0" text="hodnoty" />
+    <Button fx:id="btnDFS" layoutX="837.0" layoutY="461.0" minHeight="19.0" mnemonicParsing="false" onAction="#startDFS" prefHeight="48.0" prefWidth="427.9998779296875" text="prehladavanie do hlbky" />
+    <Button fx:id="btnBFS" layoutX="836.0" layoutY="525.0" mnemonicParsing="false" onAction="#startBFS" prefHeight="48.0" prefWidth="428.0000999999975" text="prehladavanie do sirky" />
+    <CheckBox fx:id="chckBox" layoutX="838.0" layoutY="425.0" mnemonicParsing="false" text="pouzit random generator" />
+    <Label layoutX="388.0" layoutY="646.0" text="aktualna hlbka spracovania" />
+    <TextField id="txtFieldStav" fx:id="txtFieldStav2" layoutX="559.0" layoutY="643.0" prefWidth="107.0" />
+    <TextArea fx:id="txtArea" layoutX="39.0" layoutY="35.0" prefHeight="569.0" prefWidth="725.0" wrapText="true">
+      <stylesheets>
+        <URL value="@main-view.css" />
+      </stylesheets>
+    </TextArea>
+    <TextField id="txtFieldStav" fx:id="txtFieldHlbka" layoutX="895.0" layoutY="234.0" prefWidth="103.0" />
+    <Label layoutX="795.0" layoutY="239.0" text="Hlbka hladania" />
+    <Button id="btnStop" fx:id="btnStop" layoutX="835.0" layoutY="595.0" mnemonicParsing="false" onAction="#stopExecution" prefHeight="48.0" prefWidth="428.0000999999975" text="STOP" />
+  </children>
+  <padding>
+    <Insets bottom="200.0" left="150.0" right="600.0" top="500.0" />
+  </padding>
+  <stylesheets>
+    <URL value="@main-view.css" />
+  </stylesheets>
+</AnchorPane>
