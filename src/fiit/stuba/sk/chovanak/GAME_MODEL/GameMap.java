@@ -2,7 +2,7 @@ package fiit.stuba.sk.chovanak.GAME_MODEL;
 
 public class GameMap {
 
-	private MapEntity[][] map;
+	private String[][] map;
 	
 	private int height;
 	
@@ -14,13 +14,33 @@ public class GameMap {
 		this.weight = weight;
 	}
 
-	private MapEntity[][] generateMap(int height, int weight, int maxNumOfStones) {
+	
+	/**
+	 * vytvori kopiu mapy
+	 * @param map2
+	 */
+	public GameMap(GameMap map2) {
 		
-		MapEntity[][] ret = new MapEntity[height][weight];
+		String[][] mapToCopy = map2.getMap();
+		this.map = new String[map2.getHeight()][map2.getWeight()];
+		this.height = map2.getHeight();
+		this.weight = map2.getWeight();
+		
+		for(int i = 0; i < map2.getHeight(); i++){
+			for(int j = 0; j < map2.getWeight();j++){
+				this.map[i][j] = mapToCopy[i][j];
+			}
+		}
+		
+	}
+
+	private String[][] generateMap(int height, int weight, int maxNumOfStones) {
+		
+		String[][] ret = new String[height][weight];
 
 		for(int i = 0; i < height; i++){
 			for(int j = 0; j < weight; j++){
-				ret[i][j] = MapEntity.N;
+				ret[i][j] = "0";
 			}
 		}
 		
@@ -28,7 +48,7 @@ public class GameMap {
 		
 			int h = (int) (Math.random() * height);
 			int w = (int) (Math.random() * weight);			
-			ret[h][w] = MapEntity.S;
+			ret[h][w] = "S";
 		
 		}
 		
@@ -36,7 +56,7 @@ public class GameMap {
 	
 	}
 
-	public MapEntity[][] getMap() {
+	public String[][] getMap() {
 		return map;
 	}
 
